@@ -25,7 +25,7 @@ public class Commande implements Serializable {
     private double totalPrice;
 
     @Enumerated(EnumType.STRING)
-    CommandeStatus commandeStatus;
+    private CommandeStatus commandeStatus;
 
     @Enumerated(EnumType.STRING)
     private PaymentStatus paymentStatus;
