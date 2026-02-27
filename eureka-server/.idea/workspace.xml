@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92de3ea0-5e5b-4a89-a1ef-d2b809e4b387" name="Changes" comment="" />
+    <list default="true" id="92de3ea0-5e5b-4a89-a1ef-d2b809e4b387" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../USER-SERVICE/src/main/java/tn/esprit/userservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../USER-SERVICE/src/main/java/tn/esprit/userservice/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../microserviceLivraison/Database/Data/Delivery.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../microserviceLivraison/Database/Data/Delivery.mv.db" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,14 +17,33 @@
   <component name="CopilotPersistence">
     <persistenceIdMap>
       <entry key="_/Users/macbook/Documents/eureka-server" value="3ADbChZLA8AyDG2IoTB4Hcnkn2B" />
+      <entry key="_/Users/macbook/Documents/restaurant-microservices/eureka-server" value="3ADk0yG2rVLpQ7MSuueyGEtKInO" />
     </persistenceIdMap>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Mehdi-Safraoui&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mehdi-Safraoui/restaurant-microservices.git&quot;,
+    &quot;accountId&quot;: &quot;44780387-f644-4c71-a4e5-0f30cd441932&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -32,10 +55,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.eureka-server [clean].executor": "Run",
+    "Maven.eureka-server [install].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.EurekaServerApplication.executor": "Run",
-    "last_opened_file_path": "/Users/macbook/Documents/eureka-server",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/macbook/Documents/restaurant-microservices/eureka-server",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -46,6 +77,8 @@
 }]]></component>
   <component name="RunManager">
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="jbr-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.eurekaserver.EurekaServerApplication" />
       <method v="2">
@@ -70,11 +103,27 @@
       <updated>1772129964620</updated>
       <workItem from="1772129965660" duration="4000" />
       <workItem from="1772130018835" duration="917000" />
+      <workItem from="1772134307262" duration="5000" />
+      <workItem from="1772134333482" duration="33000" />
+      <workItem from="1772134476119" duration="155000" />
+      <workItem from="1772134632519" duration="10000" />
+      <workItem from="1772134668713" duration="4369000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
