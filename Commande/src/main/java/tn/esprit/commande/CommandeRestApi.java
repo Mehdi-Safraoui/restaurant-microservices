@@ -3,6 +3,7 @@ package tn.esprit.commande;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.commande.Dto.Plat;
 import tn.esprit.commande.entity.Commande;
 import tn.esprit.commande.entity.CommandeStatus;
 
@@ -35,4 +36,15 @@ public class CommandeRestApi {
     public void delete(@PathVariable Long id) {
         commandeService.delete(id);
     }
+
+    @GetMapping("/plats")
+    public List<Plat> getAllPlats() {
+        return commandeService.getAllPlats();
+    }
+
+    @GetMapping("/plats/{id}")
+    public Plat getPlatById(@PathVariable Long id) {
+        return commandeService.getPlatById(id);
+    }
+
 }

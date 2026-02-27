@@ -2,6 +2,7 @@ package tn.esprit.commande;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tn.esprit.commande.Dto.Plat;
 import tn.esprit.commande.entity.Commande;
 import tn.esprit.commande.entity.CommandeStatus;
 
@@ -13,6 +14,18 @@ public class CommandeService {
 
     @Autowired
     private CommandeRepository commandeRepository;
+
+    @Autowired
+    private PlatClient platClient;
+
+    public List<Plat> getAllPlats() {
+        return platClient.getAll();
+    }
+
+    public Plat getPlatById(Long id) {
+        return platClient.getById(id);
+    }
+
 
     public Commande addCommande(Commande commande) {
         commande.setCreatedAt(LocalDateTime.now());
