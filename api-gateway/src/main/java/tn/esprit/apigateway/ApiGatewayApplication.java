@@ -35,6 +35,8 @@ public class ApiGatewayApplication {
                         .uri("lb://reviews"))
                 .route("livraison-service", r -> r.path("/api/deliveries/**")
                         .uri("lb://microserviceLivraison"))
+                .route("blog-service", r -> r.path("/blogs/**")
+                        .uri("lb://BLOG-SERVICE"))
                 .build();
     }
 
