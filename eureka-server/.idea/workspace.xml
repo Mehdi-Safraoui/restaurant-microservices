@@ -5,6 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92de3ea0-5e5b-4a89-a1ef-d2b809e4b387" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/tn/esprit/apigateway/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../microserviceLivraison/src/main/java/tn/esprit/microservicelivraison/DeliveryConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../microserviceLivraison/src/main/java/tn/esprit/microservicelivraison/DeliveryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../microserviceLivraison/src/main/java/tn/esprit/microservicelivraison/DeliveryPersonDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../microserviceLivraison/src/main/java/tn/esprit/microservicelivraison/DeliveryProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../microserviceLivraison/src/main/java/tn/esprit/microservicelivraison/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../microserviceLivraison/src/main/java/tn/esprit/microservicelivraison/config/KeycloakConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../microserviceLivraison/src/main/java/tn/esprit/microservicelivraison/config/KeycloakSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../microserviceLivraison/Database/Data/Delivery.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../microserviceLivraison/Database/Data/Delivery.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../microserviceLivraison/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../microserviceLivraison/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../microserviceLivraison/src/main/java/tn/esprit/microservicelivraison/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../microserviceLivraison/src/main/java/tn/esprit/microservicelivraison/DeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../microserviceLivraison/src/main/java/tn/esprit/microservicelivraison/DeliveryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../microserviceLivraison/src/main/java/tn/esprit/microservicelivraison/DeliveryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../microserviceLivraison/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../microserviceLivraison/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../reviews/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../reviews/pom.xml" afterDir="false" />
@@ -57,30 +73,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.eureka-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.eureka-server [install].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/restaurant-microservices/api-gateway&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.eureka-server [clean].executor": "Run",
+    "Maven.eureka-server [install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/user/Desktop/sb/restaurant-microservices/eureka-server",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="jbr-17" />
@@ -95,8 +111,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
       </set>
     </attachedChunks>
   </component>
@@ -120,6 +136,8 @@
       <workItem from="1774175372672" duration="235000" />
       <workItem from="1774175657833" duration="360000" />
       <workItem from="1774176049460" duration="6136000" />
+      <workItem from="1774479873409" duration="1428000" />
+      <workItem from="1774653095379" duration="1350000" />
       <workItem from="1774591851255" duration="1562000" />
       <workItem from="1774657325565" duration="2833000" />
     </task>
