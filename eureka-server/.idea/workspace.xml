@@ -27,6 +27,9 @@
       <change beforePath="$PROJECT_DIR$/../reviews/src/main/java/com/restaurant/reviews/ReviewsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reviews/src/main/java/com/restaurant/reviews/ReviewsApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../reviews/src/main/java/com/restaurant/reviews/service/ComplaintService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reviews/src/main/java/com/restaurant/reviews/service/ComplaintService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../reviews/src/main/java/com/restaurant/reviews/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reviews/src/main/java/com/restaurant/reviews/service/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commande/src/main/java/tn/esprit/commande/CommandeRestApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Commande/src/main/java/tn/esprit/commande/CommandeRestApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commande/src/main/java/tn/esprit/commande/CommandeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Commande/src/main/java/tn/esprit/commande/CommandeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +143,9 @@
       <workItem from="1774653095379" duration="1350000" />
       <workItem from="1774591851255" duration="1562000" />
       <workItem from="1774657325565" duration="2833000" />
+      <workItem from="1774176049460" duration="8000000" />
+      <workItem from="1774646972234" duration="1270000" />
+      <workItem from="1774653639072" duration="718000" />
     </task>
     <servers />
   </component>
