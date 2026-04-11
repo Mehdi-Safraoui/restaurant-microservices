@@ -11,6 +11,7 @@ import tn.esprit.userservice.entity.Role;
 import tn.esprit.userservice.entity.User;
 import tn.esprit.userservice.feign.ReviewsClient;
 import tn.esprit.userservice.repository.UserRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -21,7 +22,9 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final ReviewsClient reviewsClient;
+    private final KeycloakAuthService keycloakAuthService;
 
+    @Transactional
     public AuthResponse register(RegisterRequest req) {
         if (userRepository.existsByEmail(req.getEmail())) {
             throw new RuntimeException("Email already in use");
@@ -38,19 +41,23 @@ public class UserService {
         user.setActive(true);
 
         User saved = userRepository.save(user);
+        String token = keycloakAuthService.registerAndGetToken(
+                req.getEmail(),
+                req.getPassword(),
+                req.getPrenom(),
+                req.getNom()
+        );
 
-        return new AuthResponse(null, saved.getEmail(), saved.getRole().name());
+        return new AuthResponse(token, saved.getEmail(), saved.getRole().name());
     }
 
     public AuthResponse login(LoginRequest req) {
         User user = userRepository.findByEmail(req.getEmail())
                 .orElseThrow(() -> new RuntimeException("Invalid email or password"));
 
-        if (!passwordEncoder.matches(req.getPassword(), user.getPassword())) {
-            throw new RuntimeException("Invalid email or password");
-        }
+        String token = keycloakAuthService.loginAndGetToken(req.getEmail(), req.getPassword());
 
-        return new AuthResponse(null, user.getEmail(), user.getRole().name());
+        return new AuthResponse(token, user.getEmail(), user.getRole().name());
     }
 
     public List<User> getAllUsers() {

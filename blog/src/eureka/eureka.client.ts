@@ -49,10 +49,30 @@ export class EurekaClient {
         servicePath,
         maxRetries: Number(process.env.EUREKA_MAX_RETRIES ?? 3),
         requestRetryDelay: Number(process.env.EUREKA_RETRY_DELAY ?? 2000),
-        fetchRegistry: false,
+        fetchRegistry: true,
         registerWithEureka: true,
       },
     });
+  }
+
+  /**
+   * Resolve the base URL of a service registered in Eureka.
+   * Returns e.g. "http://192.168.100.38:8084"
+   * Falls back to null if the service is not found.
+   */
+  getServiceUrl(appName: string): string | null {
+    try {
+      const instances = this.client.getInstancesByAppId(appName.toUpperCase());
+      if (instances && instances.length > 0) {
+        const instance = instances[0];
+        const host = instance.ipAddr ?? instance.hostName;
+        const port = instance.port?.['$'] ?? instance.port;
+        return `http://${host}:${port}`;
+      }
+    } catch {
+      // Registry not available yet or service not found
+    }
+    return null;
   }
 
   async start(): Promise<void> {
@@ -88,8 +108,15 @@ export class EurekaClient {
   }
 }
 
-export const createEurekaClient = (options: EurekaOptions): EurekaClient =>
-  new EurekaClient(options);
+/** Shared instance so the rest of the app can resolve services */
+let sharedClient: EurekaClient | null = null;
+
+export const createEurekaClient = (options: EurekaOptions): EurekaClient => {
+  sharedClient = new EurekaClient(options);
+  return sharedClient;
+};
+
+export const getEurekaClient = (): EurekaClient | null => sharedClient;
 
 const getLocalIp = (): string => {
   const nets = networkInterfaces();

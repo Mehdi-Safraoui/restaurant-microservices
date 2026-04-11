@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/config-server/src/main/resources/config/EVENEMENT-SERVICE.properties">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/config-server/src/main/resources/config/EVENEMENT-SERVICE.properties" />
+              <option name="originalContent" value="server.port=8082&#10;&#10;spring.datasource.url=jdbc:h2:mem:evenementdb&#10;spring.datasource.driverClassName=org.h2.Driver&#10;spring.datasource.username=sa&#10;spring.datasource.password=&#10;&#10;spring.jpa.hibernate.ddl-auto=update&#10;spring.h2.console.enabled=true&#10;spring.h2.console.path=/h2-console&#10;&#10;eureka.client.service-url.defaultZone=http://localhost:8761/eureka/&#10;eureka.client.register-with-eureka=true&#10;eureka.client.fetch-registry=true&#10;&#10;management.endpoints.web.exposure.include=health,info,env,refresh&#10;management.endpoint.health.show-details=always&#10;&#10;evenement.message=Configuration chargee depuis le Config Server pour EVENEMENT-SERVICE&#10;&#10;" />
+              <option name="updatedContent" value="server.port=8082&#10;&#10;spring.datasource.url=jdbc:h2:mem:evenementdb&#10;spring.datasource.driverClassName=org.h2.Driver&#10;spring.datasource.username=sa&#10;spring.datasource.password=&#10;&#10;spring.jpa.hibernate.ddl-auto=update&#10;spring.h2.console.enabled=true&#10;spring.h2.console.path=/h2-console&#10;&#10;eureka.client.service-url.defaultZone=http://localhost:8761/eureka/&#10;eureka.client.register-with-eureka=true&#10;eureka.client.fetch-registry=true&#10;&#10;management.endpoints.web.exposure.include=health,info,env,refresh&#10;management.endpoint.health.show-details=always&#10;&#10;evenement.message=Configuration chargee depuis le Config Server pour EVENEMENT-SERVICE&#10;&#10;# Force-disable servlet security in this MS (security is handled by API Gateway)&#10;spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration,org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration,org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/evenement-service/src/main/resources/application.properties">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/evenement-service/src/main/resources/application.properties" />
+              <option name="originalContent" value="spring.application.name=EVENEMENT-SERVICE&#10;&#10;spring.cloud.config.enabled=true&#10;spring.config.import=optional:configserver:http://localhost:8888&#10;&#10;# Local fallback when the Config Server is unavailable&#10;server.port=8082&#10;&#10;spring.datasource.url=jdbc:h2:mem:evenementdb&#10;spring.datasource.driverClassName=org.h2.Driver&#10;spring.datasource.username=sa&#10;spring.datasource.password=&#10;&#10;spring.jpa.hibernate.ddl-auto=update&#10;spring.h2.console.enabled=true&#10;spring.h2.console.path=/h2-console&#10;&#10;eureka.client.service-url.defaultZone=http://localhost:8761/eureka/&#10;eureka.client.register-with-eureka=true&#10;eureka.client.fetch-registry=true&#10;&#10;management.endpoints.web.exposure.include=health,info,env,refresh&#10;management.endpoint.health.show-details=always&#10;&#10;evenement.message=Configuration locale de secours pour EVENEMENT-SERVICE&#10;" />
+              <option name="updatedContent" value="spring.application.name=EVENEMENT-SERVICE&#10;&#10;spring.cloud.config.enabled=true&#10;spring.config.import=optional:configserver:http://localhost:8888&#10;&#10;# Local fallback when the Config Server is unavailable&#10;server.port=8082&#10;&#10;spring.datasource.url=jdbc:h2:mem:evenementdb&#10;spring.datasource.driverClassName=org.h2.Driver&#10;spring.datasource.username=sa&#10;spring.datasource.password=&#10;&#10;spring.jpa.hibernate.ddl-auto=update&#10;spring.h2.console.enabled=true&#10;spring.h2.console.path=/h2-console&#10;&#10;eureka.client.service-url.defaultZone=http://localhost:8761/eureka/&#10;eureka.client.register-with-eureka=true&#10;eureka.client.fetch-registry=true&#10;&#10;management.endpoints.web.exposure.include=health,info,env,refresh&#10;management.endpoint.health.show-details=always&#10;&#10;evenement.message=Configuration locale de secours pour EVENEMENT-SERVICE&#10;&#10;# Force-disable servlet security in this MS (security is handled by API Gateway)&#10;spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration,org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration,org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

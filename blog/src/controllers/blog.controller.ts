@@ -42,7 +42,7 @@ export class BlogController {
 
   @Get(':id')
   get(@Param('id') id: string) {
-    return this.blogService.get(Number(id));
+    return this.blogService.get(id);
   }
 
   @Post()
@@ -53,17 +53,17 @@ export class BlogController {
 
   @Put(':id/publish')
   publish(@Param('id') id: string) {
-    return this.blogService.publish(Number(id));
+    return this.blogService.publish(id);
   }
 
   @Put(':id/archive')
   archive(@Param('id') id: string) {
-    return this.blogService.archive(Number(id));
+    return this.blogService.archive(id);
   }
 
   @Put(':id')
   update(@Param('id') id: string, @Body() data: any) {
-    return this.blogService.update(Number(id), data);
+    return this.blogService.update(id, data);
   }
 
   @Delete('author/:author')
@@ -75,6 +75,6 @@ export class BlogController {
   @Delete(':id')
   @HttpCode(HttpStatus.NO_CONTENT)
   delete(@Param('id') id: string) {
-    return this.blogService.delete(Number(id));
+    return this.blogService.delete(id);
   }
 }
