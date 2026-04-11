@@ -5,32 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a4e1b89-3ef6-4228-849d-49d9d2c3ba35" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Commande/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Commande/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Commande/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Commande/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/USER-SERVICE/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/USER-SERVICE/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USER-SERVICE/src/main/java/tn/esprit/userservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/USER-SERVICE/src/main/java/tn/esprit/userservice/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USER-SERVICE/src/main/java/tn/esprit/userservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/USER-SERVICE/src/main/java/tn/esprit/userservice/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/USER-SERVICE/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/USER-SERVICE/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/tn/esprit/apigateway/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/tn/esprit/apigateway/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/controllers/blog.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/controllers/blog.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/eureka/eureka.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/eureka/eureka.client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/modules/blog.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/modules/blog.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/services/blog.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/services/blog.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/EVENEMENT-SERVICE.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/EVENEMENT-SERVICE.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eureka-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evenement-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/evenement-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evenement-service/src/main/java/com/brainwaves/evenementservice/config/KeycloakJwtRoleConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evenement-service/src/main/java/com/brainwaves/evenementservice/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evenement-service/src/main/java/com/brainwaves/evenementservice/controller/EvenementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/evenement-service/src/main/java/com/brainwaves/evenementservice/controller/EvenementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evenement-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/evenement-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evenement-service/src/test/java/com/brainwaves/evenementservice/EvenementServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/evenement-service/src/test/java/com/brainwaves/evenementservice/EvenementServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-plat-service/Database/Data/RestaurantDB.lock.db" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-plat-service/Database/Data/RestaurantDB.lock.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-plat-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-plat-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-plat-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-plat-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microserviceLivraison/Database/Data/Delivery.lock.db" beforeDir="false" afterPath="$PROJECT_DIR$/microserviceLivraison/Database/Data/Delivery.lock.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microserviceLivraison/Database/Data/Delivery.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/microserviceLivraison/Database/Data/Delivery.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/microserviceLivraison/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/microserviceLivraison/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reviews/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reviews/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reviews/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reviews/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +201,7 @@
       <workItem from="1775816690264" duration="28000" />
       <workItem from="1775817380798" duration="92000" />
       <workItem from="1775906402023" duration="18533000" />
-      <workItem from="1775941289211" duration="2626000" />
+      <workItem from="1775941289211" duration="5775000" />
     </task>
     <servers />
   </component>
