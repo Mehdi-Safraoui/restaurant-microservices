@@ -46,4 +46,8 @@ public class DeliveryService {
     public List<Delivery> getAll(){
         return deliveryRepository.findAll();
     }
+
+    public void deleteDelivery(Long id) {
+        deliveryRepository.deleteById(id);
+    }
 }
