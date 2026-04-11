@@ -3,7 +3,7 @@ package tn.esprit.commande;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.commande.Dto.Plat;
+import tn.esprit.commande.Dto.*;
 import tn.esprit.commande.entity.Commande;
 import tn.esprit.commande.entity.CommandeStatus;
 
@@ -45,6 +45,24 @@ public class CommandeRestApi {
     @GetMapping("/plats/{id}")
     public Plat getPlatById(@PathVariable Long id) {
         return commandeService.getPlatById(id);
+    }
+
+    // ========== USER CLIENT ENDPOINTS ==========
+    @GetMapping("/users/{userId}")
+    public User getUserById(@PathVariable Long userId) {
+        return commandeService.getUserById(userId);
+    }
+
+    // ========== DELIVERY CLIENT ENDPOINTS ==========
+    @PostMapping("/deliveries")
+    public Delivery createDelivery(@RequestBody Delivery delivery) {
+        return commandeService.createDelivery(delivery);
+    }
+
+    // ========== COMPLAINT CLIENT ENDPOINTS ==========
+    @PostMapping("/complaints")
+    public Complaint createComplaint(@RequestBody ComplaintDTO dto) {
+        return commandeService.createComplaint(dto);
     }
 
 }

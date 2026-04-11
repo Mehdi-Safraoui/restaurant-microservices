@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a4e1b89-3ef6-4228-849d-49d9d2c3ba35" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/USER-SERVICE/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/USER-SERVICE/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USER-SERVICE/src/main/java/tn/esprit/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/USER-SERVICE/src/main/java/tn/esprit/userservice/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USER-SERVICE/src/main/java/tn/esprit/userservice/config/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/USER-SERVICE/src/main/java/tn/esprit/userservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/USER-SERVICE/src/main/java/tn/esprit/userservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USER-SERVICE/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/USER-SERVICE/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reviews/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reviews/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="218" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yassinesaoud&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mehdi-Safraoui/restaurant-microservices.git&quot;,
+    &quot;accountId&quot;: &quot;01c3e5ca-8097-43c0-8c37-9d622ccf81c6&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3BlWNJVfpIclbkJwnbFo2C5PCyH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven..executor": "Run",
+    "Maven.review-service [install].executor": "Run",
+    "Maven.review-service [site].executor": "Run",
+    "Notification.DisplayName-DoNotAsk-Database detector": "Database detector",
+    "Notification.DoNotAsk-Database detector": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.ReviewsApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "user",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.updates",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ReviewsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="review-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.restaurant.reviews.ReviewsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.26775.15" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.26775.15" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a4e1b89-3ef6-4228-849d-49d9d2c3ba35" name="Changes" comment="" />
+      <created>1775064096571</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1775064096571</updated>
+      <workItem from="1775064099574" duration="1015000" />
+      <workItem from="1775066495725" duration="3050000" />
+      <workItem from="1775078211282" duration="24000" />
+      <workItem from="1775078251092" duration="3438000" />
+      <workItem from="1775816690264" duration="28000" />
+      <workItem from="1775817380798" duration="92000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.apollographql.ijplugin.settings.ProjectSettingsState">
+    <option name="hasEnabledGraphQLPluginApolloKotlinSupport" value="true" />
+    <option name="lspPassPathToSuperGraphYaml" value="false" />
+    <option name="telemetryInstanceId" value="ce4a5398-8604-4ef3-a4ee-0fdc49756e7f" />
+  </component>
+</project>

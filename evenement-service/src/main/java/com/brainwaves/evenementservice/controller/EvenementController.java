@@ -2,41 +2,55 @@ package com.brainwaves.evenementservice.controller;
 
 import com.brainwaves.evenementservice.entity.Evenement;
 import com.brainwaves.evenementservice.repository.EvenementRepository;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Map;
 
+@RefreshScope
 @RestController
 @RequestMapping("/evenements")
 public class EvenementController {
 
     private final EvenementRepository repository;
+    private final String evenementMessage;
 
-    public EvenementController(EvenementRepository repository) {
+    public EvenementController(
+            EvenementRepository repository,
+            @Value("${evenement.message:Configuration locale du service evenement}") String evenementMessage) {
         this.repository = repository;
+        this.evenementMessage = evenementMessage;
     }
 
-    // CREATE
+    @GetMapping("/config/message")
+    public Map<String, String> getConfigMessage() {
+        return Map.of("message", evenementMessage);
+    }
+
     @PostMapping
+    @PreAuthorize("hasRole('USER')")
     public Evenement create(@RequestBody Evenement evenement) {
         return repository.save(evenement);
     }
 
-    // READ ALL
     @GetMapping
     public List<Evenement> getAll() {
         return repository.findAll();
     }
 
-    // READ BY ID
     @GetMapping("/{id}")
     public Evenement getById(@PathVariable Long id) {
         return repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Evenement not found"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Evenement not found"));
     }
 
-    // UPDATE
     @PutMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public Evenement update(@PathVariable Long id, @RequestBody Evenement updatedEvent) {
         return repository.findById(id)
                 .map(event -> {
@@ -46,12 +60,15 @@ public class EvenementController {
                     event.setLieu(updatedEvent.getLieu());
                     return repository.save(event);
                 })
-                .orElseThrow(() -> new RuntimeException("Evenement not found"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Evenement not found"));
     }
 
-    // DELETE
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public void delete(@PathVariable Long id) {
+        if (!repository.existsById(id)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Evenement not found");
+        }
         repository.deleteById(id);
     }
 }

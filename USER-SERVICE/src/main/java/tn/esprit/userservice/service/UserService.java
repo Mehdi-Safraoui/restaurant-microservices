@@ -3,7 +3,6 @@ package tn.esprit.userservice.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import tn.esprit.userservice.config.JwtUtil;
 import tn.esprit.userservice.dto.AuthResponse;
 import tn.esprit.userservice.dto.LoginRequest;
 import tn.esprit.userservice.dto.RegisterRequest;
@@ -19,7 +18,6 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final JwtUtil jwtUtil;
 
     public AuthResponse register(RegisterRequest req) {
         if (userRepository.existsByEmail(req.getEmail())) {
@@ -38,8 +36,7 @@ public class UserService {
 
         User saved = userRepository.save(user);
 
-        String token = jwtUtil.generateToken(saved.getEmail(), saved.getRole().name());
-        return new AuthResponse(token, saved.getEmail(), saved.getRole().name());
+        return new AuthResponse(null, saved.getEmail(), saved.getRole().name());
     }
 
     public AuthResponse login(LoginRequest req) {
@@ -50,8 +47,7 @@ public class UserService {
             throw new RuntimeException("Invalid email or password");
         }
 
-        String token = jwtUtil.generateToken(user.getEmail(), user.getRole().name());
-        return new AuthResponse(token, user.getEmail(), user.getRole().name());
+        return new AuthResponse(null, user.getEmail(), user.getRole().name());
     }
 
     public List<User> getAllUsers() {
