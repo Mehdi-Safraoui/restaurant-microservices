@@ -6,9 +6,14 @@ export class BlogController {
   constructor(private readonly blogService: BlogService) {}
 
   // Routes spéciales d'abord
-  @Get()
+  @Get('simple')
   getAllSimple() {
     return this.blogService.getAllSimple();
+  }
+
+  @Get('reviews/user/:userId')
+  getUserComplaintsFromReviews(@Param('userId') userId: string) {
+    return this.blogService.getUserComplaintsFromReviews(Number(userId));
   }
 
   @Get('search/:term')

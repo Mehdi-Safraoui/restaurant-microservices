@@ -45,6 +45,10 @@ public class ComplaintService {
         return complaintRepository.findAll();
     }
 
+    public List<Complaint> getComplaintsByUserId(Long userId) {
+        return complaintRepository.findByUserId(userId);
+    }
+
     public Complaint resolveComplaint(Long id) {
         Complaint complaint = complaintRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Complaint not found"));

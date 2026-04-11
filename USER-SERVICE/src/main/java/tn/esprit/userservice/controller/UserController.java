@@ -3,6 +3,7 @@ package tn.esprit.userservice.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.userservice.dto.ComplaintDTO;
 import tn.esprit.userservice.dto.RegisterRequest;
 import tn.esprit.userservice.entity.User;
 import tn.esprit.userservice.service.UserService;
@@ -24,6 +25,11 @@ public class UserController {
     @GetMapping("/{id}")
     public User getUserById(@PathVariable Long id) {
         return userService.getUserById(id);
+    }
+
+    @GetMapping("/{id}/complaints")
+    public List<ComplaintDTO> getUserComplaints(@PathVariable Long id) {
+        return userService.getUserComplaints(id);
     }
 
     @PutMapping("/{id}")

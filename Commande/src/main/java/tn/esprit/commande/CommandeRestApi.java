@@ -26,6 +26,11 @@ public class CommandeRestApi {
         return commandeService.getAll();
     }
 
+    @GetMapping("/{id}")
+    public Commande getById(@PathVariable Long id) {
+        return commandeService.getById(id);
+    }
+
     @PutMapping("/{id}/{status}")
     public Commande updateStatus(@PathVariable Long id,
                                  @PathVariable CommandeStatus status) {

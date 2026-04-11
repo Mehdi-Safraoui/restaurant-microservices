@@ -1,9 +1,13 @@
+import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable()
 export class BlogService {
   private blogs: any[] = [];
   private idCounter = 1;
+
+  constructor(private readonly httpService: HttpService) {}
 
   // Simple GET
   get(id: number) {
@@ -88,5 +92,13 @@ export class BlogService {
   // ARCHIVE
   archive(id: number) {
     return this.update(id, { status: 'ARCHIVED' });
+  }
+
+  async getUserComplaintsFromReviews(userId: number) {
+    const reviewsBaseUrl = process.env.REVIEWS_BASE_URL ?? 'http://localhost:8084';
+    const response = await firstValueFrom(
+      this.httpService.get(`${reviewsBaseUrl}/api/complaints/user/${userId}`),
+    );
+    return response.data;
   }
 }

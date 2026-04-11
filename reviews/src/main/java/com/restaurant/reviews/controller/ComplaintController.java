@@ -27,6 +27,11 @@ public class ComplaintController {
         return ResponseEntity.ok(complaintService.getAllComplaints());
     }
 
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<Complaint>> getByUserId(@PathVariable Long userId) {
+        return ResponseEntity.ok(complaintService.getComplaintsByUserId(userId));
+    }
+
     @PutMapping("/resolve/{id}")
     public ResponseEntity<Complaint> resolve(@PathVariable Long id) {
         return ResponseEntity.ok(complaintService.resolveComplaint(id));

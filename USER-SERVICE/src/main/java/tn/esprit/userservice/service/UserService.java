@@ -4,10 +4,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import tn.esprit.userservice.dto.AuthResponse;
+import tn.esprit.userservice.dto.ComplaintDTO;
 import tn.esprit.userservice.dto.LoginRequest;
 import tn.esprit.userservice.dto.RegisterRequest;
 import tn.esprit.userservice.entity.Role;
 import tn.esprit.userservice.entity.User;
+import tn.esprit.userservice.feign.ReviewsClient;
 import tn.esprit.userservice.repository.UserRepository;
 
 import java.util.List;
@@ -18,6 +20,7 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final ReviewsClient reviewsClient;
 
     public AuthResponse register(RegisterRequest req) {
         if (userRepository.existsByEmail(req.getEmail())) {
@@ -86,6 +89,11 @@ public class UserService {
             throw new RuntimeException("User not found with id: " + id);
         }
         userRepository.deleteById(id);
+    }
+
+    public List<ComplaintDTO> getUserComplaints(Long userId) {
+        getUserById(userId);
+        return reviewsClient.getComplaintsByUserId(userId);
     }
 }
 

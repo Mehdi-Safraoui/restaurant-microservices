@@ -12,8 +12,16 @@ public class DeliveryService {
 
     private final DeliveryRepository deliveryRepository;
     private final DeliveryPersonRepository deliveryPersonRepository;
+    private final CommandeClient commandeClient;
 
     public Delivery createDelivery(Delivery delivery){
+        if (delivery.getOrderId() != null) {
+            OrderDTO order = commandeClient.getOrderById(delivery.getOrderId());
+            if (order == null || order.getId() == null) {
+                throw new IllegalArgumentException("Commande introuvable : " + delivery.getOrderId());
+            }
+        }
+
         delivery.setStatus(DeliveryStatus.CREATED);
         delivery.setCreatedAt(LocalDateTime.now());
         return deliveryRepository.save(delivery);

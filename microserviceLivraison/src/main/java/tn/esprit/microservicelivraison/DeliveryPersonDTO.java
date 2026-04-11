@@ -1,16 +1,9 @@
 package tn.esprit.microservicelivraison;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 
-@Entity
 @AllArgsConstructor
 public class DeliveryPersonDTO {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;

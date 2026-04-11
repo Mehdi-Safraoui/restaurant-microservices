@@ -1,20 +1,15 @@
 package tn.esprit.microservicelivraison;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 
 import java.time.LocalDateTime;
-@Entity
 @AllArgsConstructor
 public class DeliveryDTO {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Long orderId;
     private String deliveryAddress;
 
-    @Enumerated(EnumType.STRING)
     private DeliveryStatus status;
 
     private LocalDateTime createdAt;
@@ -90,6 +85,5 @@ public class DeliveryDTO {
         this.deliveryPerson = deliveryPerson;
     }
 
-    @ManyToOne
     private DeliveryPerson deliveryPerson;
 }

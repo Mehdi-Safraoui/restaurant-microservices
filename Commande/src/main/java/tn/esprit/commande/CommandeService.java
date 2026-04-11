@@ -62,6 +62,10 @@ public class CommandeService {
         return commandeRepository.findAll();
     }
 
+    public Commande getById(Long id) {
+        return commandeRepository.findById(id).orElse(null);
+    }
+
     public Commande updateStatus(Long id, CommandeStatus status) {
         Commande cmd = commandeRepository.findById(id).orElse(null);
         if (cmd != null) {
