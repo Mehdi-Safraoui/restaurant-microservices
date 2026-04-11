@@ -7,6 +7,7 @@ import tn.esprit.commande.entity.Commande;
 import tn.esprit.commande.entity.CommandeStatus;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -50,4 +51,14 @@ public class CommandeService {
         commandeRepository.deleteById(id);
     }
 
+    //yassmine rabitMq
+
+    private List<Plat> plats = new ArrayList<>();
+
+    public void addPlat(Plat platDTO) {
+        plats.add(platDTO);
+        System.out.println("✅ Ajouté à la commande : " + platDTO.getNom());
+    }
 }
+
+

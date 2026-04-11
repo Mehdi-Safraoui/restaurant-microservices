@@ -1,8 +1,11 @@
 package tn.esprit.gestionplatservice.service;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
+import tn.esprit.gestionplatservice.Dto.PlatDTO;
 import tn.esprit.gestionplatservice.entity.Plat;
 import tn.esprit.gestionplatservice.repository.IngredientRepository;
 import tn.esprit.gestionplatservice.repository.PlatRepository;
+
 
 import java.util.List;
 
@@ -10,11 +13,13 @@ import java.util.List;
 public class PlatService {
     private final PlatRepository platRepository;
     private final IngredientRepository ingredientRepository;
+    private final PlatProducer platProducer;
 
     public PlatService(PlatRepository platRepository,
-                       IngredientRepository ingredientRepository) {
+                       IngredientRepository ingredientRepository ,PlatProducer platProducer) {
         this.platRepository = platRepository;
         this.ingredientRepository = ingredientRepository;
+        this.platProducer = platProducer;
     }
 
     public Plat createPlat(Plat plat) {
@@ -45,5 +50,21 @@ public class PlatService {
 
     public void delete(Long id) {
         platRepository.deleteById(id);
+    }
+
+    @Transactional
+
+    public Plat saveAndSend(Plat plat) {
+
+        Plat saved = platRepository.save(plat);
+
+        PlatDTO dto = new PlatDTO(
+                saved.getId(),
+                saved.getNom(),
+                saved.getPrix()
+        );
+        platProducer.sendPlat(dto);
+
+        return saved;
     }
 }
