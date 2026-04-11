@@ -2,13 +2,31 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="candidat" />
+        <module name="Commandess" />
+        <module name="eureka-server" />
+        <module name="evenement-service" />
+        <module name="microserviceLivraison" />
+      </profile>
+      <profile name="Annotation profile for USER-SERVICE" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+        </processorPath>
+        <module name="USER-SERVICE" />
+      </profile>
       <profile name="Annotation profile for Review Service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar" />
         </processorPath>
         <module name="review-service" />
@@ -17,6 +35,13 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Commandess" options="-parameters" />
+      <module name="USER-SERVICE" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="candidat" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="evenement-service" options="-parameters" />
+      <module name="microserviceLivraison" options="-parameters" />
       <module name="review-service" options="-parameters" />
     </option>
   </component>
