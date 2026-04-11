@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92de3ea0-5e5b-4a89-a1ef-d2b809e4b387" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../api-gateway/src/main/java/tn/esprit/apigateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/tn/esprit/apigateway/ApiGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blog/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../microserviceLivraison/Database/Data/Delivery.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../microserviceLivraison/Database/Data/Delivery.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reviews/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../reviews/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reviews/src/main/java/com/restaurant/reviews/ReviewsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reviews/src/main/java/com/restaurant/reviews/ReviewsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reviews/src/main/java/com/restaurant/reviews/service/ComplaintService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reviews/src/main/java/com/restaurant/reviews/service/ComplaintService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reviews/src/main/java/com/restaurant/reviews/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../reviews/src/main/java/com/restaurant/reviews/service/ReviewService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +21,7 @@
     <persistenceIdMap>
       <entry key="_/Users/macbook/Documents/eureka-server" value="3ADbChZLA8AyDG2IoTB4Hcnkn2B" />
       <entry key="_/Users/macbook/Documents/restaurant-microservices/eureka-server" value="3ADk0yG2rVLpQ7MSuueyGEtKInO" />
+      <entry key="_D:/restaurant-microservices/eureka-server" value="3BW5CEElX4aKb3dM7miOmILRC2i" />
     </persistenceIdMap>
   </component>
   <component name="Git.Settings">
@@ -67,7 +70,8 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/macbook/Documents/restaurant-microservices/eureka-server&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/restaurant-microservices/api-gateway&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -91,11 +95,12 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.29188.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.29188.11" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="92de3ea0-5e5b-4a89-a1ef-d2b809e4b387" name="Changes" comment="" />
@@ -115,6 +120,8 @@
       <workItem from="1774175372672" duration="235000" />
       <workItem from="1774175657833" duration="360000" />
       <workItem from="1774176049460" duration="6136000" />
+      <workItem from="1774591851255" duration="1562000" />
+      <workItem from="1774657325565" duration="2833000" />
     </task>
     <servers />
   </component>
@@ -131,6 +138,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.apollographql.ijplugin.settings.ProjectSettingsState">
+    <option name="hasEnabledGraphQLPluginApolloKotlinSupport" value="true" />
+    <option name="telemetryInstanceId" value="c5d83b30-5246-4354-8f58-74d72533d510" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
