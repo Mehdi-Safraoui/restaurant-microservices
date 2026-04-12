@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import tn.esprit.commande.Dto.*;
 import tn.esprit.commande.entity.Commande;
 import tn.esprit.commande.entity.CommandeStatus;
+import tn.esprit.commande.entity.PaymentStatus;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -55,6 +56,9 @@ public class CommandeService {
     public Commande addCommande(Commande commande) {
         commande.setCreatedAt(LocalDateTime.now());
         commande.setCommandeStatus(CommandeStatus.EN_ATTENTE);
+        if (commande.getPaymentStatus() == null) {
+            commande.setPaymentStatus(PaymentStatus.NON_PAYEE);
+        }
         return commandeRepository.save(commande);
     }
 
@@ -70,9 +74,28 @@ public class CommandeService {
         Commande cmd = commandeRepository.findById(id).orElse(null);
         if (cmd != null) {
             cmd.setCommandeStatus(status);
-            return commandeRepository.save(cmd);
+            Commande saved = commandeRepository.save(cmd);
+
+            if (status == CommandeStatus.PRETE || status == CommandeStatus.EN_LIVRAISON) {
+                ensureDeliveryExists(saved);
+            }
+
+            return saved;
         }
         return null;
+    }
+
+    private void ensureDeliveryExists(Commande commande) {
+        Delivery delivery = new Delivery();
+        delivery.setOrderId(commande.getId());
+        delivery.setTotalPrice(commande.getTotalPrice());
+        delivery.setDeliveryAddress(commande.getDeliveryAddress());
+        delivery.setStatus("CREATED");
+        try {
+            deliveryClient.createDelivery(delivery);
+        } catch (Exception ignored) {
+            // Une livraison existe probablement deja pour cette commande.
+        }
     }
 
     public void delete(Long id) {
@@ -88,5 +111,3 @@ public class CommandeService {
         System.out.println("✅ Ajouté à la commande : " + platDTO.getNom());
     }
 }
-
-

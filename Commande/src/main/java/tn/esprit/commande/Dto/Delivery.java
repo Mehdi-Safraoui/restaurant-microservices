@@ -14,9 +14,10 @@ import java.time.LocalDateTime;
 public class Delivery {
     private Long id;
     private Long orderId;
+    private Double totalPrice;
+    private String deliveryAddress;
     private Long deliveryPersonId;
     private String status;
     private LocalDateTime createdAt;
     private LocalDateTime deliveredAt;
 }
-

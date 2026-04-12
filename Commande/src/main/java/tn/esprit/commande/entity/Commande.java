@@ -24,6 +24,8 @@ public class Commande implements Serializable {
 
     private double totalPrice;
 
+    private String deliveryAddress;
+
     @Enumerated(EnumType.STRING)
     private CommandeStatus commandeStatus;
 

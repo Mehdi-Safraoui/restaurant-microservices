@@ -8,4 +8,5 @@ import java.util.List;
 @Repository
 public interface DeliveryRepository extends JpaRepository<Delivery, Long> {
     List<Delivery> findByStatus(DeliveryStatus status);
+    boolean existsByOrderId(Long orderId);
 }

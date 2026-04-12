@@ -12,6 +12,7 @@ public class Delivery {
     private Long id;
 
     private Long orderId;
+    private Double totalPrice;
     private String deliveryAddress;
 
     @Enumerated(EnumType.STRING)
@@ -47,6 +48,14 @@ public class Delivery {
 
     public void setDeliveryAddress(String deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
+    }
+
+    public Double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(Double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     public DeliveryStatus getStatus() {

@@ -22,6 +22,11 @@ public class ReviewController {
         return ResponseEntity.ok(reviewService.addReview(dto));
     }
 
+    @GetMapping
+    public ResponseEntity<List<Review>> getAllReviews() {
+        return ResponseEntity.ok(reviewService.getAllReviews());
+    }
+
     @GetMapping("/dish/{dishId}")
     public ResponseEntity<List<Review>> getReviews(@PathVariable Long dishId) {
         return ResponseEntity.ok(reviewService.getApprovedReviews(dishId));

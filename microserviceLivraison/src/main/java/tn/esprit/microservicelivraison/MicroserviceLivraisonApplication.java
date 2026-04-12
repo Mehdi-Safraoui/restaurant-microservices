@@ -37,15 +37,6 @@ public class MicroserviceLivraisonApplication {
             deliveryPersonRepository.save(dp2);
             deliveryPersonRepository.save(dp3);
 
-            // ===== Ajouter livraisons test =====
-            Delivery d1 = new Delivery(null,101L,"Tunis centre",DeliveryStatus.CREATED,
-                    LocalDateTime.now(),null,30,dp1);
-
-            Delivery d2 = new Delivery(null,102L,"Ariana",DeliveryStatus.CREATED,
-                    LocalDateTime.now(),null,25,dp2);
-
-            deliveryRepository.save(d1);
-            deliveryRepository.save(d2);
 
             // ===== Affichage =====
             deliveryRepository.findAll().forEach(System.out::println);

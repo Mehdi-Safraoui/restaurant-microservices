@@ -20,6 +20,21 @@ public class DeliveryService {
             if (order == null || order.getId() == null) {
                 throw new IllegalArgumentException("Commande introuvable : " + delivery.getOrderId());
             }
+
+            if (deliveryRepository.existsByOrderId(delivery.getOrderId())) {
+                throw new IllegalArgumentException("Une livraison existe deja pour la commande : " + delivery.getOrderId());
+            }
+
+            if (delivery.getTotalPrice() == null) {
+                delivery.setTotalPrice(order.getTotalPrice());
+            }
+            if (delivery.getDeliveryAddress() == null || delivery.getDeliveryAddress().isBlank()) {
+                delivery.setDeliveryAddress(order.getDeliveryAddress());
+            }
+        }
+
+        if (delivery.getDeliveryAddress() == null || delivery.getDeliveryAddress().isBlank()) {
+            delivery.setDeliveryAddress("Adresse non renseignee");
         }
 
         delivery.setStatus(DeliveryStatus.CREATED);
@@ -43,9 +58,19 @@ public class DeliveryService {
         Delivery d = deliveryRepository.findById(id).orElseThrow();
         d.setStatus(status);
 
+        if (status == DeliveryStatus.IN_DELIVERY && d.getOrderId() != null) {
+            commandeClient.updateOrderStatus(d.getOrderId(), "EN_LIVRAISON");
+        }
+
         if(status == DeliveryStatus.DELIVERED){
             d.setDeliveredAt(LocalDateTime.now());
-            d.getDeliveryPerson().setAvailable(true);
+            if (d.getDeliveryPerson() != null) {
+                d.getDeliveryPerson().setAvailable(true);
+                deliveryPersonRepository.save(d.getDeliveryPerson());
+            }
+            if (d.getOrderId() != null) {
+                commandeClient.updateOrderStatus(d.getOrderId(), "LIVREE");
+            }
         }
 
         return deliveryRepository.save(d);
@@ -57,5 +82,12 @@ public class DeliveryService {
 
     public void deleteDelivery(Long id) {
         deliveryRepository.deleteById(id);
+    }
+
+    public void deleteAllDeliveries() {
+        List<DeliveryPerson> deliveryPeople = deliveryPersonRepository.findAll();
+        deliveryPeople.forEach(person -> person.setAvailable(true));
+        deliveryPersonRepository.saveAll(deliveryPeople);
+        deliveryRepository.deleteAll();
     }
 }

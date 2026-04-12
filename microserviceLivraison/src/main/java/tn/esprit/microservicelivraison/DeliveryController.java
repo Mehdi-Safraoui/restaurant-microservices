@@ -56,5 +56,10 @@ public class DeliveryController {
         deliveryService.deleteDelivery(id);
         return ResponseEntity.ok("Livraison supprimée");
     }
-}
 
+    @DeleteMapping("/admin/reset")
+    public ResponseEntity<?> deleteAllDeliveries() {
+        deliveryService.deleteAllDeliveries();
+        return ResponseEntity.ok("Toutes les livraisons ont ete supprimees");
+    }
+}
