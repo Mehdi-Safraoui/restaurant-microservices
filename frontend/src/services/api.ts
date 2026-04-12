@@ -5,7 +5,7 @@ const API_URLS = {
   users: import.meta.env.VITE_USERS_API_URL || "/api/users",
   auth: import.meta.env.VITE_USERS_API_URL?.replace("/users", "/auth") || "/api/auth",
   plats: import.meta.env.VITE_PLATS_API_URL || "/api/plats",
-  ingredients: "/api/ingredients",
+  ingredients: import.meta.env.VITE_INGREDIENTS_API_URL || "/api/ingredients",
   commandes: import.meta.env.VITE_COMMANDES_API_URL || "/api/commandes",
   reviews: import.meta.env.VITE_REVIEWS_API_URL || "/api/reviews",
   complaints: import.meta.env.VITE_COMPLAINTS_API_URL || "/api/complaints",
