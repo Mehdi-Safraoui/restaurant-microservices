@@ -41,6 +41,7 @@ RabbitMQ        :5672  / UI :15672
 | Reviews & Complaints | `reviews/` | 8084 | Spring Boot | MySQL (`review_db`) |
 | Evenement | `evenement-service/` | 8082 | Spring Boot | H2 (mémoire) |
 | Blog | `blog/` | 3002 | NestJS + Mongoose | MongoDB |
+| **Swagger/OpenAPI Docs** | `swagger-docs/` | 8090 | Swagger UI + OpenAPI 3.0 | — |
 | Frontend | `frontend/` | 5173 | React 18 + Vite + Tailwind | — |
 
 ---
@@ -197,6 +198,7 @@ En développement, Vite proxie tous les `/api/*` vers l'API Gateway (`localhost:
 
 | URL | Description |
 |---|---|
+| `http://localhost:8090` | **Swagger UI** — Documentation complète de l'API |
 | `http://localhost:8761` | Eureka — liste des services enregistrés |
 | `http://localhost:8888` | Config Server |
 | `http://localhost:15672` | RabbitMQ Management (guest/guest) |
